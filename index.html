@@ -100,17 +100,17 @@
         id="home"
       >
         <div class="w-100">
-          <h1 class="mb-0">
+          <h1 class="mb-0 hover-me">
             Aravind Venkatesan
           </h1>
-          <div class="subheading text-primary mb-5">
+          <div class="subheading text-primary mb-5 hover-me">
             full stack engineer
           </div>
             <div class="row">
-              <div class="col-6">
+              <div class="col-lg-6 col-md-6 col-sm-12 btn-home-center">
                 <a href="./data/Aravind Venkatesan - Resume.pdf" class="btn btn-outline-primary" download>Download Resume</a>
               </div>
-              <div class="col-6">
+              <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="social-icons-home">
                   <a
                     href="https://www.linkedin.com/in/aravind-venkatesan-2457a1108"
@@ -140,7 +140,7 @@
         id="experience"
       >
         <div class="w-100">
-          <h2 class="mb-5">Experience</h2>
+          <h2 class="mb-5 hover-me">Experience</h2>
           <div
           class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
         >
@@ -212,7 +212,7 @@
         id="education"
       >
         <div class="w-100">
-          <h2 class="mb-5">Education</h2>
+          <h2 class="mb-5 hover-me">Education</h2>
 
           <div
             class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
@@ -249,7 +249,7 @@
         id="skills"
       >
         <div class="w-100">
-          <h2 class="mb-5">Skills</h2>
+          <h2 class="mb-5 hover-me">Skills</h2>
           <div class="subheading mb-1 mt-2">
             Front End Development
           </div>
@@ -326,8 +326,34 @@
         id="projects"
       >
         <div class="w-100">
-          <h2 class="mb-5">Projects</h2>
-          <div class="row">
+          <h2 class="mb-5 hover-me">Projects</h2>
+          <nav class="nav nav-pills nav-justified nv-font mb-4">
+            <div class="nav-item nav-link active" id="personal-projects-link">Personal Projects</div>
+            <div class="nav-item nav-link" id="academic-projects-link">Academic Projects</div>
+          </nav>
+          <div class="row mt-2 d-none" id="academic-projects">
+            <div class="col-xl-4 col-l-4 col-md-6 col-sm-12 mt-2 mb-2">
+              <div class="card text-black">
+                <img class="card-img-top my-ac-top" src="./img/project/7.PNG" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-black">Sparkfab</h5>
+                  <p class="card-text">Big Data Systems For Data Science</p>
+                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#projectModal" id="sparkfab"><i class="fas fa-info-circle"> </i> View More</a>
+                </div>
+              </div>
+              </div>
+              <div class="col-xl-4 col-l-4 col-md-6 col-sm-12 mt-2 mb-2">
+                <div class="card text-black">
+                  <img class="card-img-top my-ac-top" src="./img/project/8.PNG" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title text-black">Blockbustr</h5>
+                    <p class="card-text">Web Application Security</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#projectModal" id="blockbustr"><i class="fas fa-info-circle"> </i> View More</a>
+                  </div>
+                </div>
+                </div>
+          </div>
+          <div class="row mt-2" id="personal-projects">
             <div class="col-xl-4 col-l-4 col-md-6 col-sm-12 mt-2 mb-2">
               <div class="card text-black">
                 <img class="card-img-top my-top" src="./img/project/1.png" alt="Card image cap">
@@ -473,18 +499,22 @@
         id="contact"
       >
       <div class="w-100">
-        <h2 class="mb-5">Connect Now</h2>
-        <form action="mailto:aravindvenkat1905@hotmail.com" method="POST">
+        <h2 class="mb-5 hover-me">Connect Now</h2>
+        <div class="alert d-none" role="alert" id="alert-div">
+          &nbsp;
+        </div>
+        <form action="https://formspree.io/xyyndbbg" method="POST" id="contact-form">
           <div class="form-group">
             <label for="contact-email">Email address</label>
-            <input type="email" class="form-control" name="email" id="contact-email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input type="email" class="form-control" name="email" placeholder="Enter a valid email" id="contact-email" required>
           </div>
           <div class="form-group">
             <label for="contact-message">Message</label>
             <textarea class="form-control" id="contact-message" name="message"
-            rows="3" placeholder="Enter message" required></textarea>
+            rows="3" placeholder="Enter your message" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"> </i> Submit</button>
         </form>
       </div>
       </section>

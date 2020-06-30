@@ -12,6 +12,16 @@ body {
   }
 }
 
+::-moz-selection {
+  color: #fff;
+  background:#ffc1073b;
+}
+
+::selection {
+  color: #fff;
+  background:#ffc1073b;
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +32,7 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+  user-select: none;
 }
 
 h1 {
@@ -250,4 +261,64 @@ section.resume-section .resume-item .resume-date {
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
+  .social-icons-home{
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+  .hover-me{
+    text-align: left !important;
+  }
+  .btn-home-center{
+    text-align: left !important;
+  }
+  .nv-font{
+    font-size: 1.2rem !important;
+  }
+  .my-ac-top{
+    height: 8rem !important;
+  }
+}
+
+.social-icons-home{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-home-center{
+  text-align: center;
+}
+
+.hover-me{
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  text-align: center;
+}
+.hover-me:hover{
+  transform: scaleY(1.2);
+}
+
+.alert-success{
+    color: #000000;
+    background-color: #ffc107;
+    border-color: #f4d06f;
+}
+
+.alert-danger{
+  color: #fff;
+  background-color: crimson;
+  border-color: #f1f1f1;
+}
+
+.nv-font{
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.my-ac-top{
+  height: 10rem !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #000000;
+  background-color: #ffc107;
 }
