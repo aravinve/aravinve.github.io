@@ -147,6 +147,7 @@ li {
 .badge-primary {
   background-color: #ffc107;
   color: #000000;
+  user-select: none;
 }
 
 .text-black {
