@@ -1,8 +1,20 @@
+:root{
+  --primary-color: #172b4d;
+  --secondary-color: #f1f1f1;
+  --primary-light-color: #cad8f1;
+  --background-color: #fff;
+  --text-color: #000;
+  --text-light-color: #f1f1f1;
+  --text-selection-color: #cad8f1;
+  --error-color: #dc143c;
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
   padding-top: 54px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @media (min-width: 992px) {
@@ -13,13 +25,13 @@ body {
 }
 
 ::-moz-selection {
-  color: #fff;
-  background:#ffc1073b;
+  color: var(--text-color);
+  background: var(--text-selection-color);
 }
 
 ::selection {
-  color: #fff;
-  background:#ffc1073b;
+  color: var(--text-color);
+  background: var(--text-selection-color);
 }
 
 h1,
@@ -28,10 +40,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-color);
   user-select: none;
 }
 
@@ -41,12 +53,12 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
-  color: #ffc107;
+  font-size: 1.75rem;
+  color: var(--primary-color);
 }
 
 .my-top {
@@ -65,7 +77,7 @@ h3 {
 }
 
 .card {
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -74,21 +86,21 @@ h3 {
 }
 
 .bg-primary {
-  background-color: #ffc107 !important;
+  background-color: var(--primary-color) !important;
 }
 
 .text-primary {
-  color: #ffc107 !important;
+  color: var(--primary-color) !important;
 }
 
 a {
-  color: #ffc107;
+  color: var(--primary-color);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #f4d06f;
+  color: var(--primary-color);
 }
 
 p.lead {
@@ -96,14 +108,18 @@ p.lead {
   font-weight: 400;
 }
 
+ul > li.nav-item{
+  list-style-type: none;
+}
+
 li {
   list-style-type: square;
 }
 
 .subheading {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Ubuntu', sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
 }
 
@@ -116,13 +132,13 @@ li {
   display: inline-block;
   height: 2rem;
   width: 2.5rem;
-  background-color: #ffffff;
-  color: #000000 !important;
+  background-color: var(--secondary-color);
+  color: var(--primary-color) !important;
   border-radius: 4px;
   text-align: center;
   font-size: 1.2rem;
   line-height: 2rem;
-  transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .social-icons-home a {
@@ -136,8 +152,8 @@ li {
 
 .social-icons a:hover,
 .social-icons-home a:hover {
-  background-color: #ffc107;
-  color: #000000 !important;
+  background-color: var(--primary-color);
+  color: var(--secondary-color) !important;
 }
 
 .dev-icons {
@@ -145,26 +161,27 @@ li {
 }
 
 .badge-primary {
-  background-color: #ffc107;
-  color: #000000;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   user-select: none;
+  font-weight: 300;
 }
 
 .text-black {
-  color: #000000;
+  color: var(--text-color);
 }
 
 .btn-primary,
 .btn-outline-primary {
-  color: #000000 !important;
-  border-color: #000000 !important;
-  background-color: #ffc107 !important;
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 .btn-outline-primary:hover {
-  color: #ffffff !important;
-  background-color: #000000 !important;
-  border-color: #ffc107 !important;
+  color: var(--text-color) !important;
+  background-color: var(--secondary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -174,16 +191,16 @@ li {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #ffffff;
+  outline-color: var(--text-color);
 }
 
 #sideNav {
-  box-shadow: 0px 5px 1px 1px #ffc107;
+  box-shadow: 0px 5px 1px 1px var(--primary-color);
 }
 
 #profile {
   border-radius: 4px;
-  border: 1px solid #000000;
+  border: 1px solid var(--secondary-color);
   width: 50px !important;
   height: 50px !important;
 }
@@ -202,7 +219,7 @@ li {
     flex-direction: column;
     width: 17rem;
     height: 100vh;
-    box-shadow: 5px 0px 1px 1px #ffc107;
+    box-shadow: 5px 0px 1px 1px var(--primary-color);
   }
   #sideNav .navbar-brand {
     display: flex;
@@ -212,7 +229,7 @@ li {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.2rem solid #ffc107;
+    border: 0.2rem solid var(--primary-color);
     border-radius: 10px;
   }
   #sideNav .navbar-collapse {
@@ -290,24 +307,24 @@ section.resume-section .resume-item .resume-date {
 }
 
 .hover-me{
-  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   user-select: none;
   text-align: center;
 }
 .hover-me:hover{
-  transform: scaleY(1.2);
+  transform: scale(1.02, 1.05);
 }
 
 .alert-success{
-    color: #000000;
-    background-color: #ffc107;
-    border-color: #f4d06f;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-light-color);
 }
 
 .alert-danger{
-  color: #fff;
-  background-color: crimson;
-  border-color: #f1f1f1;
+  color: var(--text-color);
+  background-color:  var(--error-color);
+  border-color: var(--text-light-color);
 }
 
 .nv-font{
@@ -320,6 +337,6 @@ section.resume-section .resume-item .resume-date {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-  color: #000000;
-  background-color: #ffc107;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
