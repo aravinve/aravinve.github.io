@@ -125,6 +125,7 @@ li {
 
 .social-nav-item {
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .social-icons a,
@@ -188,6 +189,7 @@ li {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  text-align: left;
 }
 
 #sideNav .navbar-toggler:focus {
